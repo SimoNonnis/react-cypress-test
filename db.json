@@ -6,11 +6,6 @@
       "isComplete": false
     },
     {
-      "id": 2,
-      "name": "Buy Eggs",
-      "isComplete": false
-    },
-    {
       "id": 3,
       "name": "Buy Bread",
       "isComplete": false
@@ -19,6 +14,11 @@
       "id": 4,
       "name": "Make French Toast",
       "isComplete": false
+    },
+    {
+      "name": "Pizza",
+      "isComplete": false,
+      "id": 5
     }
   ]
 }
