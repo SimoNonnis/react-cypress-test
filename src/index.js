@@ -1,6 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import TodoApp from './components/TodoApp'
-import './styles.css'
+import React from 'react';
+import { render } from 'react-dom';
 
-ReactDOM.render(<TodoApp />, document.getElementById('app'))
+import TodoApp from './components/TodoApp';
+import './styles.css';
+
+render(<TodoApp />, document.getElementById('app'));
