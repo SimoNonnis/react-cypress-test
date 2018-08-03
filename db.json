@@ -14,11 +14,6 @@
       "id": 4,
       "name": "Make French Toast",
       "isComplete": false
-    },
-    {
-      "name": "Pizza",
-      "isComplete": false,
-      "id": 5
     }
   ]
 }

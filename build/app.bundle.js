@@ -25367,14 +25367,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function (props) {
   return _react2.default.createElement(
-    'form',
+    "form",
     { onSubmit: props.handleTodoSubmit },
-    _react2.default.createElement('input', {
-      type: 'text',
+    _react2.default.createElement("input", {
+      type: "text",
+      autoFocus: true,
       value: props.currentTodo,
       onChange: props.handleNewTodoChange,
-      className: 'new-todo',
-      placeholder: 'What needs to be done?' })
+      className: "new-todo",
+      placeholder: "What needs to be done?"
+    })
   );
 };
 
