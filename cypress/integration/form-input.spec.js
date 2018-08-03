@@ -1,13 +1,15 @@
 describe('Test Form Input', () => {
-  it('should visit the app', () => {
+  beforeEach(() => {
     cy.visit('/');
+  });
+
+  it('should focus the input on load', () => {
     cy.focused().should('have.class', 'new-todo');
   });
 
-  it.only('should accept input value', () => {
+  it('should accept input value', () => {
     const typedInput = 'Buy Pizza';
 
-    cy.visit('/');
     cy.get('.new-todo')
       .type(typedInput)
       .should('have.value', typedInput);
