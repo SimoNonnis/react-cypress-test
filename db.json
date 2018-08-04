@@ -2,7 +2,8 @@
   "todos": [
     {
       "id": 1,
-      "name": "Buy Milk",
+      "name": "Make pizza",
+      "completed": false,
       "isComplete": false
     },
     {
