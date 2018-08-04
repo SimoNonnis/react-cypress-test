@@ -1,10 +1,10 @@
 describe('Test App init', () => {
   it('should load list of todos from API', () => {
     cy.server();
-    cy.route('GET', '/api/todos', [
-      { id: 1, name: 'Make pizza', completed: false }
-    ]);
+    cy.fixture('todos').then(todos => {
+      cy.route('GET', '/api/todos', todos);
+    });
     cy.visit('/');
-    cy.get('.todo-list li').should('have.length', 1);
+    cy.get('.todo-list li').should('have.length', 4);
   });
 });
