@@ -14,4 +14,23 @@ describe('Test form submission', () => {
     cy.wait('@save');
     cy.get('.todo-list li').should('have.length', 1);
   });
+
+  it('should show an error message for a failed form submission', () => {
+    const newTodo = 'New Todo Test';
+    cy.server();
+    cy.route({
+      method: 'POST',
+      url: '/api/todos',
+      status: 500,
+      response: {}
+    }).as('save');
+    cy.loadAndVisit([]);
+    cy.get('.new-todo')
+      .type(newTodo)
+      .type('{enter}');
+    cy.wait('@save');
+
+    cy.get('.todo-list li').should('have.length', 0);
+    cy.get('.error').should('be.visible');
+  });
 });
