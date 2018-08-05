@@ -9,7 +9,9 @@ describe('Test List Item Behavior', () => {
 
     cy.loadAndVisit();
 
-    cy.get('.todo-list li')
+    cy.get('.todo-list li').as('list');
+
+    cy.get('@list')
       .first()
       .find('.destroy')
       .invoke('show')
@@ -17,6 +19,6 @@ describe('Test List Item Behavior', () => {
 
     cy.wait('@delete');
 
-    cy.get('.todo-list li').should('have.length', 3);
+    cy.get('@list').should('have.length', 3);
   });
 });
